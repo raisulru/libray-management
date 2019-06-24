@@ -59,7 +59,7 @@ CORS_ORIGIN_WHITELIST = [
     "https://sub.example.com",
     "http://localhost:3000",
     "http://127.0.0.1:3000"
-)
+]
 
 
 ROOT_URLCONF = 'library.urls'
