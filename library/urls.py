@@ -24,4 +24,4 @@ urlpatterns = [
     # path('api/v1/', include('users.urls')),
     # path('api/v1/', include('book.urls')),
     # path('api/v1/', include('book_issue.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
