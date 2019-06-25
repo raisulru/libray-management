@@ -3,6 +3,9 @@ from django.db import models
 class BookCategory(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 class Book(models.Model):
     name = models.CharField(max_length=200)
@@ -12,4 +15,7 @@ class Book(models.Model):
     description = models.TextField(null=True, blank=True)
     total = models.PositiveIntegerField(default=0)
     soft_copy = models.FileField(upload_to='uploads/%Y/%m/%d/', null=True, blank=True)
+
+    def __str__(self):
+        return self.name
 
