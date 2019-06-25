@@ -15,4 +15,5 @@ class IssueBook(models.Model):
     status = models.CharField(max_length=30, choices=ISSUE_STATUS, default=WITHDRAW)
 
     def __str__(self):
-        return self.user + '#' + self.book
+        string = '{} Book is issued to {}'.format(self.book, self.user)
+        return string
